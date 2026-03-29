@@ -24,7 +24,7 @@ export function calculateDividendYield(entry: PortfolioEntry): number {
 /**
  * Safely calculate a number, returning 0 if result is NaN or undefined
  */
-function safeCalculate(calculateFn: () => number): number {
+export function safeCalculate(calculateFn: () => number): number {
   const result = calculateFn();
   return isNaN(result) || !isFinite(result) ? 0 : result;
 }
